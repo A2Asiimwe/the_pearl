@@ -12,5 +12,19 @@
     justify-content: center;
     border-radius: 50px;
     background: var(--secondary-color);
-    padding:0.5rem
+    padding:0.5rem;
+    line-height: 50px;
+}
+.service__img img{
+    width: 100%;
+}
+.service__item h5{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.service__item p {
+    font-size: .9rem;
+    color: var(--text-color)
+    
 }

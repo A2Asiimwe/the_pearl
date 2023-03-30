@@ -7,11 +7,16 @@ import heroImg from '../assets/img/hero-img01.jpg';
 import heroImg02 from '../assets/img/hero-img02.jpg';
 import heroVideo from '../assets/img/hero-video.mp4';
 import worldImg from '../assets/img/world.png'
+import experienceImg  from '../assets/img/experience.png'
+import MansonaryImages from "../components/ImgGallery/MansonaryImages"
+
 import Subtitle from '../shared/Subtitle';
 
 
 import SearchBar from '../shared/SearchBar';
 import ServiceList from '../services/ServiceList';
+import FeaturedTourList from '../components/FeaturedTours/FeaturedTourList';
+
 function Home() {
   return (
     <>
@@ -69,7 +74,80 @@ function Home() {
             <ServiceList/> 
           </Row>
         </Container>
-     </section>
+      </section>
+      
+      {/* ===========FEATURED TOUR SECTION START ===================*/}
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12" className='mb-5'>
+              <Subtitle susbtitle={"Explore"} />
+              <h2 className="featured__tour-title">Our featured Tours</h2>
+            </Col>
+            <FeaturedTourList/>
+          </Row>
+
+        </Container>
+      </section> 
+      
+      {/* ===========FEATURED TOUR SECTION END ===================*/}
+    
+      {/*experience Section start*/}
+      <section>
+        <Container>
+          <Row>
+          <Col lg="6">
+            <div className="experiece__content">
+              <Subtitle subtitle={'Experiece'} />
+              <h2> with our all experience <br />  we will serve you</h2>
+              <p>There is a life out there that is meant to take shape around you.<br />
+              break the cycle, lets get you starded on that journey.
+              </p> 
+            </div>
+            <div className="counter__wrapper d-flex align-items-center gap-5">
+              <div className="counter__box">
+                <span>12k+</span>
+                <h6>Successful Trip</h6>
+              </div>
+              <div className="counter__box">
+                <span>12k+</span>
+                <h6>Regular clients</h6>
+              </div>
+              <div className="counter__box">
+                <span>15</span>
+                <h6>Years experience</h6>
+              </div>
+
+            </div>
+          </Col>
+          <Col lg="6">
+              <div className="experience_img">
+                <img src={experienceImg } alt="eperience img missing"/>
+              </div>
+          </Col>
+        </Row>
+      
+        </Container>
+        </section>
+
+      { /*=========================GALLERY SECTION START ===========================================*/}       
+      <section>
+        <Container>
+          <Row>
+            <Col lg='12'>
+              <Subtitle subtitle={'Galler'} />
+              <h2 className="gallery__title">Visit our customer Tour Gallery </h2>
+            </Col>
+
+            <Col lg="12">
+              <MansonaryImages/>
+            </Col>
+          </Row>
+        </Container>
+          </section>
+    
+       { /*=========================GALLERY SECTION START ===========================================*/}       
+
     </>
   )
 }
