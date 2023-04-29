@@ -11,12 +11,13 @@ import experienceImg  from '../assets/img/experience.png'
 import MansonaryImages from "../components/ImgGallery/MansonaryImages"
 
 import Subtitle from '../shared/Subtitle';
+import Newsletter from '../shared/Newsletter';
 
 
 import SearchBar from '../shared/SearchBar';
 import ServiceList from '../services/ServiceList';
 import FeaturedTourList from '../components/FeaturedTours/FeaturedTourList';
-
+import  Testimonials from "../components/Testimonials/Testimonials"
 function Home() {
   return (
     <>
@@ -146,8 +147,27 @@ function Home() {
         </Container>
           </section>
     
-       { /*=========================GALLERY SECTION START ===========================================*/}       
+       { /*=========================GALLERY END ===========================================*/}       
+      { /*=========================TESTIMONIAL SECTION START ===========================================*/}
 
+          <section>
+        <Container>
+          <Row>
+            <Col lg='12'>
+              <Subtitle subtitle={'Fans Love'} />
+              <h2 className="testimonial__title">What Clients Say About our Services </h2>
+            </Col>
+
+            <Col lg="12">
+              <Testimonials/>
+            </Col>
+          </Row>
+        </Container>
+          </section>
+   
+      { /*=========================TESTIMONIAL SECTION END ===========================================*/} 
+    
+    <Newsletter/>
     </>
   )
 }

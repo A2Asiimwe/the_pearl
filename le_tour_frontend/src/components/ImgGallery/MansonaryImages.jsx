@@ -10,6 +10,7 @@ const MansonaryImages = () => {
               {
                   gallery.map((item, index) => (
                       <img
+                          className="masonry__img"
                           src={item}
                           key={index}
                           alt=""
